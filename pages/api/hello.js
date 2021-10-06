@@ -6,6 +6,6 @@ export default function handler(req, res) {
   const csp = `frame-ancestors 'self' ${origin};`;
   res.setHeader("Content-Security-Policy", csp);
   res.setHeader("Content-Type", "text/html");
-  // res.status(200).send(`<html><body><pre>${csp}</pre></body></html>`);
-  res.send(`<html><body><pre>${csp}</pre></body></html>`);
+  res.status(200).send(`<html><body><pre>${csp}</pre></body></html>`);
+  // res.send(`<html><body><pre>${csp}</pre></body></html>`);
 }
