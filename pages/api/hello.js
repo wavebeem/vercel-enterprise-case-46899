@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default function handler(req, res) {
-  const prefix = new Date().toISOString().split("T")[0];
+  const prefix = Math.random().toString(16).split(".")[1];
   const origin = `https://${prefix}.example.com`;
   const csp = `frame-ancestors 'self' ${origin};`;
   res.setHeader("Content-Security-Policy", csp);
